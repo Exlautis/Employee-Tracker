@@ -1,12 +1,11 @@
 // list of dependencies 
-const mysql = require('mysql');
 const inquirer = require('inquirer');
 const consoleTable = require('console.table');
+const mysql = require('mysql');
 const util = require('util');
 
 
-
-let connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host: 'localhost',
     port: 3001,
     user: 'root',
@@ -16,7 +15,7 @@ let connection = mysql.createConnection({
 
 connection.query = util.promisify(connection.query);
 
-// app starts after connection is made
+// Begin the application after establishing the connection.
 connection.connect(function (err) {
     if (err) throw err;
     initialAction();
@@ -24,7 +23,7 @@ connection.connect(function (err) {
 
 
 console.table(
-    "EMPLOYEE TRACKER"
+    "-------EMPLOYEE TRACKER---------"
 )
 
 // first directory asking user what they would like to do

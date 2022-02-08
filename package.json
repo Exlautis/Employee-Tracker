@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Exlautis/Employee-Tracker/issues"
   },
-  "homepage": "https://github.com/Exlautis/Employee-Tracker#readme"
+  "homepage": "https://github.com/Exlautis/Employee-Tracker#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
